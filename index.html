@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <title>Dashboard | SCSS</title>
+</head>
+
+<body>
+
+    <div class="sidebar">
+
+        <img src="./imgs/logo.png" alt="logo" class="logo">
+
+        <div class="main_icons">
+            <i class="fa-solid fa-house"></i>
+            <i class="fa-solid fa-shirt"></i>
+            <i class="fa-solid fa-box"></i>
+            <i class="fa-solid fa-users"></i>
+            <i class="fa-solid fa-chart-line"></i>
+            <i class="fa-solid fa-bell"></i>
+            <i class="fa-solid fa-gear"></i>
+        </div>
+
+        <div class="second_icons">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <i class="fa-solid fa-circle-question"></i>
+        </div>
+
+    </div>
+
+    <div class="main_container">
+        <header>
+
+            <div class="container">
+
+                <div class="search-wrapper">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search products">
+                </div>
+
+
+                <div class="icons">
+                    <i class="fa-regular fa-envelope"></i>
+                    <i class="fa-solid fa-calendar"></i>
+                    <i class="fa-solid fa-earth-americas"></i>
+                </div>
+            </div>
+
+
+            <div class="account">
+                <img src="./imgs/user.jpg" alt="user">
+                <div class="text">
+                    <h2>Ahmed Hassan</h2>
+                    <p>Store Manager</p>
+                </div>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+
+
+        </header>
+
+        <div class="data">
+
+            <div class="card active">
+                <h1>$12,450</h1>
+                <p>Total Revenue</p>
+            </div>
+
+            <div class="card">
+                <h1>1,248</h1>
+                <p>Total Orders</p>
+            </div>
+
+            <div class="card">
+                <h1>320</h1>
+                <p>Products</p>
+            </div>
+
+            <div class="card">
+                <h1>89</h1>
+                <p>New Customers</p>
+            </div>
+
+        </div>
+
+        <div class="order-table">
+
+            <div class="t-head">
+                <h1>Recent Orders</h1>
+
+                <div class="date">
+                    <div class="date-button active">Today</div>
+                    <div class="date-button">This Week</div>
+                    <div class="date-button">This Month</div>
+                </div>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Status</th>
+                        <th>Customer</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+
+                        <td>M</td>
+                        <td>$45</td>
+                        <td class="delivered">Delivered</td>
+                        <td>Omar Ali</td>
+                    </tr>
+
+                    <tr>
+
+                        <td>L</td>
+                        <td>$25</td>
+                        <td class="pending">Pending</td>
+                        <td>Sara Mohamed</td>
+                    </tr>
+
+                    <tr>
+
+                        <td>XL</td>
+                        <td>$80</td>
+                        <td class="shipped">Shipped</td>
+                        <td>Khaled Youssef</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+</body>
+
+</html>

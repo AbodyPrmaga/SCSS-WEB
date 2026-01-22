@@ -1,0 +1,123 @@
+@use './mixins' as *;
+@use './variables' as *;
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 90vw;
+
+}
+
+.search-wrapper {
+    position: relative;
+    width: 250px;
+
+    input {
+        outline: none;
+        width: 100%;
+        padding: 20px 35px 20px 10px;
+        border-radius: 50px;
+        border: 2px solid $main_color;
+        background-color: transparent;
+        font-size: 18px;
+        transition: all 0.3s ease;
+
+        &:focus {
+            border-color: black;
+
+        }
+    }
+
+    i {
+        position: absolute;
+        right: 22px;
+        font-size: 21px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: $main_color;
+        cursor: pointer;
+    }
+}
+
+.main_container {
+
+    .container {
+        margin-right: 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+
+        .search-wrapper {
+            margin-right: auto;
+
+        }
+
+        @each $icon in $icon_header {
+            .fa-#{$icon} {
+                @include icon_style_header(20px, 25px);
+            }
+
+        }
+
+        .icons {
+            margin-left: auto;
+        }
+
+    }
+
+    .space {
+        flex: 1;
+        width: 100%;
+    }
+}
+
+.account {
+    border: 2px solid $main_color;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    width: 450px;
+
+    img {
+        width: 70px;
+        height: 70px;
+        object-fit: cover;
+        border-radius: 50%;
+        object-position: center 30%;
+    }
+
+    .text {
+        display: flex;
+        flex-direction: column;
+
+        h1 {
+            font-size: 16px;
+            font-weight: bold;
+            white-space: nowrap;
+            margin: 0;
+        }
+
+        p {
+            font-size: 14px;
+            margin: 0;
+            color: #555;
+        }
+    }
+
+    i {
+        margin-left: auto;
+        font-size: 14px;
+        color: #333;
+        cursor: pointer;
+        margin-right: 15px;
+        transition: all 0.3s ease;
+
+        &:hover {
+            color: $main_color;
+        }
+    }
+}

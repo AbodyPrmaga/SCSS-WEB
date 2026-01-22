@@ -1,0 +1,125 @@
+@use './variables' as *;
+
+
+@mixin page-design {
+    background-color: $page_color;
+    display: flex;
+    height: 100vh;
+}
+
+@mixin sidebar_design {
+    background-color: $main_color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+@mixin icon-style($color, $hover_color, $margin, $size) {
+    color: $color;
+    margin: $margin;
+    font-size: $size;
+    transition: all 0.3s ease;
+
+    &:hover {
+        transform: scale(1.5);
+        color: $hover_color;
+    }
+}
+
+@mixin logo-style($width, $margin, $padding) {
+    width: $width;
+    margin: $margin;
+    border-radius: 50%;
+    padding: $padding;
+    border: 2px solid black;
+}
+
+@mixin flex-sidebar($margin) {
+    display: flex;
+    flex-direction: column;
+    margin-top: $margin;
+    cursor: pointer;
+}
+
+@mixin img_filter {
+    filter: brightness(0) invert(1);
+}
+
+@mixin icon_style_header ($padding, $size) {
+    padding: $padding;
+    color: $main_color;
+    font-size: $size;
+    border: 2px solid $main_color;
+    border-radius: 50%;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+        transform: scale(1.1);
+        border-color: $main_color;
+    }
+}
+
+@mixin card_design {
+    padding: 25px;
+    background-color: #fff;
+    border-radius: 25px;
+    color: black;
+    line-height: 1.6;
+    transition: all 0.3s ease;
+}
+
+@mixin table_design {
+    padding: 25px;
+    margin: 20px 15px;
+    background-color: #fff;
+    border-radius: 25px;
+}
+
+@mixin date_btn_design {
+    padding: 5px 10px;
+    text-align: center;
+    color: #000;
+    border: 2px solid $main_color;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+@mixin general_status {
+    display: inline-block;
+    padding: 8px 24px;
+    border-radius: 20px;
+    font-weight: bold;
+    text-align: center;
+    min-width: 100px;
+    margin-top: 15px;
+
+}
+
+
+@mixin Delivered {
+    background-color: $Delivered_bg;
+    color: $Delivered_color;
+    @include general_status;
+}
+
+@mixin Pending {
+    background-color: $Pending_bg;
+    color: $Pending_color;
+    @include general_status;
+
+}
+
+@mixin Shipped {
+    background-color: $Shipped_bg;
+    color: $Shipped_color;
+    @include general_status;
+
+}

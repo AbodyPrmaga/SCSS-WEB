@@ -1,0 +1,206 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+@media (min-width: 768px) and (max-width:1200px) {
+    .data {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .account {
+        width: 100%;
+    }
+}
+
+@media (max-width:1200px) {
+    body {
+        flex-direction: column;
+
+        .sidebar {
+            width: 100%;
+            flex-direction: row;
+            border-radius: 0;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            align-items: center;
+            justify-content: center;
+            height: fit-content;
+
+            .main_icons {
+                flex-direction: row;
+                margin: 0;
+            }
+
+            .second_icons {
+                flex-direction: row;
+                margin: 0;
+            }
+        }
+    }
+}
+
+@media (max-width:768px) {
+    .sidebar {
+        display: none;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .order-table {
+        overflow: hidden;
+        padding: 0;
+        margin: 10px 5px;
+        padding: 10px;
+
+        h1 {
+            font-size: 20px;
+        }
+    }
+
+    table {
+        padding: 10px;
+        margin: 0;
+        width: 50%;
+
+        th,
+        td {
+            font-size: 16px;
+            padding: 2px 3px;
+            text-align: center;
+        }
+    }
+
+    @mixin general_status {
+        display: inline-block;
+        padding: 8px 5px;
+        border-radius: 20px;
+        font-weight: bold;
+        text-align: center;
+        width: 40px;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 490px) {
+    .data {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        font-size: 14px;
+        width: 100%;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+
+            .search-wrapper {
+                input {
+                    display: none;
+                }
+
+                i {
+
+                    position: static;
+                    transform: none;
+                    top: auto;
+                    right: auto;
+                    padding: 15px;
+                    color: $main_color;
+                    font-size: 20px;
+                    border: 2px solid $main_color;
+                    border-radius: 50%;
+                    margin: 0 10px;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                    
+                    &:hover {
+                        transform: scale(1.1);
+                        border-color: $main_color;
+                    }
+                }
+            }
+
+            .icons {
+                display: flex;
+                gap: 10px;
+
+                i {
+                    font-size: 16px;
+                    padding: 15px;
+                }
+            }
+        }
+
+        .account {
+            max-width: 100%;
+            width: 100%;
+            padding: 10px;
+            border: 2px solid $main_color;
+
+            img {
+                width: 50px;
+                height: 50px;
+            }
+
+            .text {
+                h2 {
+                    font-size: 14px;
+                }
+
+                p {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+    .main_container {
+        padding: 15px;
+    }
+
+    .order-table {
+        margin: 10px 0;
+        padding: 15px;
+
+        .t-head {
+            flex-direction: column;
+            gap: 15px;
+
+            .date {
+                justify-content: center;
+                margin-left: 0;
+
+                .date-button {
+                    padding: 8px 15px;
+                    font-size: 14px;
+                    border: 2px solid $main_color;
+                }
+            }
+        }
+
+        table {
+            th,
+            td {
+                padding: 15px 10px;
+                font-size: 14px;
+            }
+        }
+    }
+}

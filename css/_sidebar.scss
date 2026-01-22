@@ -1,0 +1,23 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+.sidebar {
+    @include sidebar_design
+}
+
+
+@each $icon in $icons {
+    .fa-#{$icon} {
+        @include icon-style(#fff,$second_color, 15px, 24px);
+    }
+}
+
+
+$classes : 'main_icons',
+'second_icons';
+
+@each $class in $classes {
+    .#{$class} {
+        @include flex-sidebar(100px);
+    }
+}
